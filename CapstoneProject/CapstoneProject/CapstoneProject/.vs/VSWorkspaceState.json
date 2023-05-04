@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CapstoneProject",
+    "\\CapstoneProjectTest",
+    "\\CapstoneProjectTest\\bin\\Debug",
+    "\\CapstoneProjectTest\\bin\\Debug\\net6.0",
+    "\\CapstoneProjectTest\\bin\\Release",
+    "\\CapstoneProjectTest\\bin\\Release\\net6.0",
+    "\\CapstoneProject\\Controllers",
+    "\\CapstoneProject\\Entities"
+  ],
+  "SelectedNode": "\\CapstoneProject\\Entities\\ClassDbContext.cs",
+  "PreviewInSolutionExplorer": false
+}

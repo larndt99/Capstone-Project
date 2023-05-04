@@ -1,0 +1,26 @@
+﻿@using CapstoneProject.Entities
+@model ClassViewModel
+
+@{
+    ViewData["Title"] = "Add class";
+}
+
+<form asp-controller="Class" asp-action="Create" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+    <div class="form-group">
+        <label asp-for="ActiveClass.ClassName"> Class Name</label>
+        <input type="text" asp-for="ActiveClass.ClassName" class="form-control" />
+    </div>
+
+    
+
+     <div class="form-group">
+        <label asp-for="ActiveClass.ClassPrice">Class Price</label>
+        <input type="text"  asp-for="ActiveClass.ClassPrice" class="form-control"/>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-controller="Class" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>
+

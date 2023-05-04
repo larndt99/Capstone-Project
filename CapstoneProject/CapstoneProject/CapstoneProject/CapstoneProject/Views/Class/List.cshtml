@@ -1,0 +1,37 @@
+﻿@using CapstoneProject.Entities
+@model List<Class>
+
+@{
+    ViewData["Title"] = "All Classes";
+}
+
+<a asp-controller="Class" asp-action="Create">Add new class</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Class Name</th>
+           
+            <th>Class Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.ClassName</td>
+              
+                <td>@student.ClassPrice</td>
+                <td>
+                    <a asp-controller="Class" asp-action="Register" asp-route-id="@student.ClassId">Register</a>
+                    <span class="mx-1">|</span>
+                    <a asp-controller="Class" asp-action="Edit" asp-route-id="@student.ClassId">Edit</a>
+                    <span class="mx-1">|</span>
+                    <a asp-controller="Class" asp-action="Delete" asp-route-id="@student.ClassId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    
+<a asp-controller="Class" asp-action="InstructorCreate">Add new Instructor</a>
+</table>

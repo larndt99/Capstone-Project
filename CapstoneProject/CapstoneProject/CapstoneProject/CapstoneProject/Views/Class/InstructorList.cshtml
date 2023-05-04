@@ -1,0 +1,35 @@
+﻿@using CapstoneProject.Entities
+@model List<Instructor>
+
+@{
+    ViewData["Title"] = "All Instructors of the class";
+}
+
+<a asp-controller="Class" asp-action="List">See all Classes</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            
+            <th> Instructor Name</th>
+            <th>Instructor Address</th>
+            <th>Instructor Phone Number</th>
+            <th>Instructor Postal Code</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+            
+                <td>@student.InstructorName</td>
+                <td>@student.InstructorAddress</td>
+                <td>@student.InstructorPhoneNumber</td>
+                <td>@student.InstructorPostalCode</td>
+                <td>
+                    <a asp-controller="Class" asp-action="DeleteInstructor" asp-route-id="@student.InstructorId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+﻿
+@using CapstoneProject.Entities
+@model Class
+
+@{
+    ViewData["Title"] = "Delete Class";
+}
+
+<h6>Confirm Deletion</h6>
+<h3>@Model.ClassName (@Model.InstructorId)</h3>
+
+<form asp-controller="Class" asp-action="Delete" method="post" enctype="application/x-www-form-urlencoded">
+    <input type="hidden" asp-for="ClassId" />
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-controller="Class" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>

@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My ASP.NET Project - About Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Import Google Fonts */
+        
+
+        /* Set up CSS variables */
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --header-font-family: 'Montserrat', sans-serif;
+            --body-font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Reset default styles */
+        html, body, ul, ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Style the main content */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-content {
+            width: 100%;
+            max-width: 500px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            font-family: var(--header-font-family);
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        p {
+            font-family: var(--body-font-family);
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+        .about-image, .about-content {
+                max-width: 100%;
+                margin: 0;
+        }
+        
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row about-container">
+                <div class="col-md-6">
+                    <img class="about-image" src="/img/about.jpg" alt="About Image" />
+                </div>
+                <div class="col-md-6 about-content">
+                    <h1>About Us</h1>
+                    <p>We are a fitness organization dedicated to helping people achieve their fitness goals through a variety of classes and programs. Our experienced instructors are passionate about fitness and will guide you through every step of your fitness journey.</p>
+                    <p>Our facilities are state-of-the-art, with the latest equipment and technology to help you get the most out of your workouts. We also offer a variety of amenities, including showers, locker rooms, and a juice bar.</p>
+                    <p>Whether you're a beginner or a seasoned athlete, we have something for everyone. Come join us and start your fitness journey today! Consider registering today!</p>
+                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Register"><button>Register Now</button></a>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

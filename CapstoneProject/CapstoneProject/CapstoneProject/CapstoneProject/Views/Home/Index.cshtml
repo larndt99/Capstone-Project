@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My ASP.NET Project</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .header-image {
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-image img { 
+ width: 100vw; 
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in-out;
+        }
+
+            .card:hover {
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+                transform: translateY(-10px);
+            }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+ color: #666;
+            margin-bottom: 20px;
+        }
+
+        .col-md-4 {
+            padding: 20px;
+        }
+
+        .icon {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .icon-container {
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .welcome-message {
+            background-color: #f2f2f2;
+            padding: 50px;
+            text-align: center;
+        }
+ .welcome-heading {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .welcome-paragraph {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+    </style>
+    <!-- Custom fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="header-image">
+  <img src="/img/fitness.jpg" alt="Fitness Header Image" />
+    </div>
+    <div class="container-fluid">
+        <div class="welcome-message">
+        <h1 class="welcome-heading">Welcome to our fitness registration system</h1>
+        <p class="welcome-paragraph">Join us and achieve your fitness goals with our wide range of classes, including cardio, strength training, and yoga. Sign up now to start your fitness journey! </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="icon-container">
+                        <i class="fas fa-dumbbell icon"></i>
+                        <a asp-controller="Account" asp-action="Register"><p>Register</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="icon-container">
+                        <i class="fas fa-heartbeat icon"></i>
+                         <a asp-controller="Class" asp-action="List"><p>All available classes</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+<div class="card">
+                    <div class="icon-container">
+                        <i class="fas fa-running icon"></i>
+                        <a asp-action="About"><p>About</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

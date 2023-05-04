@@ -1,0 +1,93 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #login-form {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        #login-form label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        #login-form input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #login-form button[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            #login-form button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        #login-form a {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form id="login-form" method="post" asp-controller="Account" asp-action="LogIn" asp-route-returnUrl="@Model.ReturnUrl" >
+        <div class="form-group">
+            <label>Username:</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username"
+                  class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" asp-for="Password"
+                   class="form-control" />
+            <span asp-validation-for="Password"
+                  class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input type="checkbox" title="Remember Me"
+                       asp-for="RememberMe" class="form-check-input" />
+                <label class="form-check-label">Remember Me</label>
+            </div>
+        </div>
+        <button type="submit">
+            Log In
+        </button>
+      
+    </form>
+</body>
+</html>
+
+

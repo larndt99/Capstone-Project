@@ -1,0 +1,42 @@
+﻿@using CapstoneProject.Entities
+@model InstructorViewModel
+
+@{
+    ViewData["Title"] = "Add Instructor";
+}
+
+<form asp-controller="Class" asp-action="InstructorCreate" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="text-danger" asp-validation-summary="All"></div>
+      <div class="form-group">
+        <label asp-for="ActiveInstructor.ClassId">class id</label>
+        <input type="text"  asp-for="ActiveInstructor.ClassId" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="ActiveInstructor.InstructorName"> Instructor Name</label>
+        <input type="text" asp-for="ActiveInstructor.InstructorName" class="form-control" />
+    </div>
+
+    @*<div class="form-group">
+        <label asp-for="ActiveClass.Instructor.InstructorName">Instructor Name</label>
+        <input type="text" asp-for="ActiveClass.Instructor.InstructorName" class="form-control" />
+    </div>*@
+    <div class="form-group">
+        <label asp-for="ActiveInstructor.InstructorPhoneNumber">Instructor Phone Number</label>
+        <input type="text"  asp-for="ActiveInstructor.InstructorPhoneNumber" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="ActiveInstructor.InstructorAddress">Instructor Address</label>
+        <input type="text"  asp-for="ActiveInstructor.InstructorAddress" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="ActiveInstructor.InstructorPostalCode">Instructor Postal Code</label>
+        <input type="text"  asp-for="ActiveInstructor.InstructorPostalCode" class="form-control"/>
+    </div>
+
+
+    
+       <a asp-controller="Class" asp-action="InstructorList" asp-route-id="@Model.ClassId">All Registration for the class</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-controller="Class" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>
+

@@ -1,0 +1,36 @@
+﻿@using CapstoneProject.Entities
+@model ClientViewModel
+
+@{
+    ViewData["Title"] = "Register Class";
+}
+
+<form asp-controller="Class" asp-action="Register" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="text-danger" asp-validation-summary="All"></div>
+     <div class="form-group">
+        <label asp-for="ActiveClient.ClassId">class id</label>
+        <input type="text"  asp-for="ActiveClient.ClassId" class="form-control"/>
+    </div>
+ 
+    <div class="form-group">
+        <label asp-for="ActiveClient.ClientName">Client Name</label>
+        <input type="text"  asp-for="ActiveClient.ClientName" class="form-control"/>
+    </div>
+
+<div class="form-group">
+        <label asp-for="ActiveClient.ClientPhoneNumber">Client Phone Number</label>
+        <input type="text"  asp-for="ActiveClient.ClientPhoneNumber" class="form-control"/>
+</div>
+    <div class="form-group">
+        <label asp-for="ActiveClient.ClientAddress">Client Address</label>
+        <input type="text"  asp-for="ActiveClient.ClientAddress" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="ActiveClient.ClientPostalCode">Client Postal Code</label>
+        <input type="text"  asp-for="ActiveClient.ClientPostalCode" class="form-control"/>
+    </div>
+
+       <a asp-controller="Class" asp-action="RegisterList" asp-route-id="@Model.ClassId">All Registration for the class</a>
+    <button type="submit" class="btn btn-primary">Confirm</button>
+    <a asp-controller="Class" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>
